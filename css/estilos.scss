@@ -1,0 +1,191 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bg-1{
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(222, 26%, 31%);
+    font-family: 'League Spartan', sans-serif;
+    color: white;
+
+    .container-principal{
+        padding: 20px;
+        .grupo-select-theme{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            p{
+                font-size: 30px;
+            }
+            // Buttom Themes
+            .lbl-switch{
+                display: inline-block;
+                width: 70px;
+                height: 32px;
+                background: hsl(223, 31%, 20%);
+                border-radius: 130px;
+                position: relative;
+                cursor: pointer;
+            }
+            #switch:checked~ .lbl-switch{
+                background: hsl(268, 47%, 21%);
+            }
+            #switch:checked~ .lbl-switch::after{
+                background: hsl(176, 100%, 44%);
+                left: 40px;
+            }
+            .lbl-switch::after{
+                position: absolute;
+                content: "";
+                width: 23px;
+                height:23px;
+                background-color: hsl(6, 70%, 34%);
+                border-radius: 100px;
+                top: 3.5px;
+                transition: all .5s;
+                left: 5px;
+            }
+            #switch{
+                display: none;
+            }
+            .change-theme{
+                display: flex;
+                align-items: center;
+                p{
+                    font-size: 20px;
+                    padding-right: 20px;
+                }
+            }
+        }
+        .grupo-resultado{
+            height: 100px;
+            width: 100%;
+            border-radius: 10px;
+            position: relative;
+            background-color: hsl(224, 36%, 15%);
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            .keypad{
+                padding-right: 20px;
+                padding-top: 4px;
+                font-size: 40px;
+            }
+        }
+
+        .grupo-keys{
+            background-color:hsl(223, 31%, 20%);
+            display: grid;
+            gap: 20px;
+            padding: 30px;
+            border-radius: 10px;
+            place-items: center;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(5, auto);
+            grid-template-areas: 
+            "n7 n8 n9 del"
+            "n4 n5 n6 sum"
+            "n1 n2 n3 subt"
+            "pnt n0 divd multip"
+            "gb gb gb gb";
+            color: black;
+            margin-top: 20px;
+
+            .key{
+                background: hsl(30, 25%, 89%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                height: 70px;
+                width: 70px;
+                font-size: 35px;
+                padding-top: 5px;
+                cursor: pointer;
+                box-shadow: inset 0px -12px 1px -5px  hsl(28, 16%, 65%);
+                color: hsl(221, 14%, 31%)
+            }
+            .keyRD{
+                @extend .key;
+                background: hsl(225, 21%, 49%);
+                color: white;
+                box-shadow: inset 0px -12px 1px -5px  hsl(224, 28%, 35%);
+                font-size: 25px;
+            }
+            .number7{
+                grid-area: n7;
+            }
+            .number8{
+                grid-area: n8;
+            }
+            .number9{
+                grid-area: n9;
+            }
+            .DEL{
+                grid-area: del;
+            }
+            .number4{
+                grid-area: n4;
+            }
+            .number5{
+                grid-area: n5;
+            }
+            .number6{
+                grid-area: n6;
+            }
+            .sum{
+                grid-area: sum;
+            }
+            .number1{
+                grid-area: n1;
+            }
+            .number2{
+                grid-area: n2;
+            }
+            .number3{
+                grid-area: n3;
+            }
+            .substrac{
+                grid-area: subt;
+            }
+            .punto{
+                grid-area: pnt;
+            }
+            .number0{
+                grid-area: n0;
+            }
+            .divide{
+                grid-area: divd;
+            }
+            .multiply{
+                grid-area: multip;
+            }
+
+            .grupo-bajo{
+                grid-area: gb;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(1,auto);
+                grid-template-areas: "reset ig";
+                width: 100%;
+                gap: 20px;
+                .reset{
+                    height: 70px;
+                    width: 100%;
+                }
+                .igual{
+                    @extend .keyRD;
+                    margin-right: 10px;
+                    height: 70px;
+                    width: 100%;
+                    background-color: hsl(6, 63%, 50%);
+                    box-shadow: inset 0px -12px 1px -5px  hsl(6, 70%, 34%);
+                }
+            }
+        }
+    }
+}

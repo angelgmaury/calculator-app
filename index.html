@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <title>Calculator app</title>
+</head>
+<body>
+  <div class="bg-1">
+    <div class="container-principal">
+      <div class="grupo-select-theme">
+        <p>calc</p>
+        <div class="change-theme">
+          <p>THEME</p>
+            <input type="checkbox" id="switch">
+            <label for="switch" class="lbl-switch"></label>
+          </div>
+        </div>
+
+        <div class="grupo-resultado">
+          <p class="keypad" id="keypad">0</p>
+        </div>
+
+        <div class="grupo-keys">
+          <div class = "number7 key">7</div>
+          <div class = "number8 key">8</div>
+          <div class = "number9 key">9</div>
+          <div class = "DEL keyRD">DEL</div>
+          <div class = "number4 key">4</div>
+          <div class = "number5 key">5</div>
+          <div class = "number6 key">6</div>
+          <div class = "sum key" id="opSuma">+</div>
+          <div class = "number1 key">1</div>
+          <div class = "number2 key">2</div>
+          <div class = "number3 key">3</div>
+          <div class = "substrac key" id="opResta">-</div>
+          <div class = "punto key">.</div>
+          <div class = "number0 key">0</div>
+          <div class = "divide key" id="opDiv">/</div>
+          <div class = "multiply key" id="opMulti">x</div>
+          <div class="grupo-bajo">
+            <div class = "reset keyRD">RESET</div>
+            <div class = "igual keyIg"> = </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="./scripts/main.js"></script>
+</body>
+</html>

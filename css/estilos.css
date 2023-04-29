@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.bg-1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #3a4764;
+  font-family: 'League Spartan', sans-serif;
+  color: white; }
+  .bg-1 .container-principal {
+    padding: 20px; }
+    .bg-1 .container-principal .grupo-select-theme {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      padding-top: 20px; }
+      .bg-1 .container-principal .grupo-select-theme p {
+        font-size: 30px; }
+      .bg-1 .container-principal .grupo-select-theme .lbl-switch {
+        display: inline-block;
+        width: 70px;
+        height: 32px;
+        background: #232c43;
+        border-radius: 130px;
+        position: relative;
+        cursor: pointer; }
+      .bg-1 .container-principal .grupo-select-theme #switch:checked ~ .lbl-switch {
+        background: #341c4f; }
+      .bg-1 .container-principal .grupo-select-theme #switch:checked ~ .lbl-switch::after {
+        background: #00e0d1;
+        left: 40px; }
+      .bg-1 .container-principal .grupo-select-theme .lbl-switch::after {
+        position: absolute;
+        content: "";
+        width: 23px;
+        height: 23px;
+        background-color: #93261a;
+        border-radius: 100px;
+        top: 3.5px;
+        transition: all .5s;
+        left: 5px; }
+      .bg-1 .container-principal .grupo-select-theme #switch {
+        display: none; }
+      .bg-1 .container-principal .grupo-select-theme .change-theme {
+        display: flex;
+        align-items: center; }
+        .bg-1 .container-principal .grupo-select-theme .change-theme p {
+          font-size: 20px;
+          padding-right: 20px; }
+    .bg-1 .container-principal .grupo-resultado {
+      height: 100px;
+      width: 100%;
+      border-radius: 10px;
+      position: relative;
+      background-color: #182034;
+      display: flex;
+      justify-content: end;
+      align-items: center; }
+      .bg-1 .container-principal .grupo-resultado .keypad {
+        padding-right: 20px;
+        padding-top: 4px;
+        font-size: 40px; }
+    .bg-1 .container-principal .grupo-keys {
+      background-color: #232c43;
+      display: grid;
+      gap: 20px;
+      padding: 30px;
+      border-radius: 10px;
+      place-items: center;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(5, auto);
+      grid-template-areas: "n7 n8 n9 del" "n4 n5 n6 sum" "n1 n2 n3 subt" "pnt n0 divd multip" "gb gb gb gb";
+      color: black;
+      margin-top: 20px; }
+      .bg-1 .container-principal .grupo-keys .key, .bg-1 .container-principal .grupo-keys .keyRD, .bg-1 .container-principal .grupo-keys .grupo-bajo .igual {
+        background: #eae3dc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        height: 70px;
+        width: 70px;
+        font-size: 35px;
+        padding-top: 5px;
+        cursor: pointer;
+        box-shadow: inset 0px -12px 1px -5px #b4a597;
+        color: #444b5a; }
+      .bg-1 .container-principal .grupo-keys .keyRD, .bg-1 .container-principal .grupo-keys .grupo-bajo .igual {
+        background: #637097;
+        color: white;
+        box-shadow: inset 0px -12px 1px -5px #404e72;
+        font-size: 25px; }
+      .bg-1 .container-principal .grupo-keys .number7 {
+        grid-area: n7; }
+      .bg-1 .container-principal .grupo-keys .number8 {
+        grid-area: n8; }
+      .bg-1 .container-principal .grupo-keys .number9 {
+        grid-area: n9; }
+      .bg-1 .container-principal .grupo-keys .DEL {
+        grid-area: del; }
+      .bg-1 .container-principal .grupo-keys .number4 {
+        grid-area: n4; }
+      .bg-1 .container-principal .grupo-keys .number5 {
+        grid-area: n5; }
+      .bg-1 .container-principal .grupo-keys .number6 {
+        grid-area: n6; }
+      .bg-1 .container-principal .grupo-keys .sum {
+        grid-area: sum; }
+      .bg-1 .container-principal .grupo-keys .number1 {
+        grid-area: n1; }
+      .bg-1 .container-principal .grupo-keys .number2 {
+        grid-area: n2; }
+      .bg-1 .container-principal .grupo-keys .number3 {
+        grid-area: n3; }
+      .bg-1 .container-principal .grupo-keys .substrac {
+        grid-area: subt; }
+      .bg-1 .container-principal .grupo-keys .punto {
+        grid-area: pnt; }
+      .bg-1 .container-principal .grupo-keys .number0 {
+        grid-area: n0; }
+      .bg-1 .container-principal .grupo-keys .divide {
+        grid-area: divd; }
+      .bg-1 .container-principal .grupo-keys .multiply {
+        grid-area: multip; }
+      .bg-1 .container-principal .grupo-keys .grupo-bajo {
+        grid-area: gb;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+        grid-template-areas: "reset ig";
+        width: 100%;
+        gap: 20px; }
+        .bg-1 .container-principal .grupo-keys .grupo-bajo .reset {
+          height: 70px;
+          width: 100%; }
+        .bg-1 .container-principal .grupo-keys .grupo-bajo .igual {
+          margin-right: 10px;
+          height: 70px;
+          width: 100%;
+          background-color: #d03f2f;
+          box-shadow: inset 0px -12px 1px -5px #93261a; }
+
+/*# sourceMappingURL=estilos.css.map */

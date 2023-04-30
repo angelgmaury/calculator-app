@@ -75,7 +75,7 @@
       color: black;
       margin-top: 20px; }
       .bg-1 .container-principal .grupo-keys .key, .bg-1 .container-principal .grupo-keys .keyRD, .bg-1 .container-principal .grupo-keys .grupo-bajo .igual {
-        background: #eae3dc;
+        background: #e2d9cf;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -87,11 +87,15 @@
         cursor: pointer;
         box-shadow: inset 0px -12px 1px -5px #b4a597;
         color: #444b5a; }
+        .bg-1 .container-principal .grupo-keys .key:hover, .bg-1 .container-principal .grupo-keys .keyRD:hover, .bg-1 .container-principal .grupo-keys .grupo-bajo .igual:hover {
+          background-color: white; }
       .bg-1 .container-principal .grupo-keys .keyRD, .bg-1 .container-principal .grupo-keys .grupo-bajo .igual {
         background: #637097;
         color: white;
         box-shadow: inset 0px -12px 1px -5px #404e72;
         font-size: 25px; }
+        .bg-1 .container-principal .grupo-keys .keyRD:hover, .bg-1 .container-principal .grupo-keys .grupo-bajo .igual:hover {
+          background-color: #556082; }
       .bg-1 .container-principal .grupo-keys .number7 {
         grid-area: n7; }
       .bg-1 .container-principal .grupo-keys .number8 {
@@ -141,5 +145,31 @@
           width: 100%;
           background-color: #d03f2f;
           box-shadow: inset 0px -12px 1px -5px #93261a; }
+          .bg-1 .container-principal .grupo-keys .grupo-bajo .igual:hover {
+            background-color: #d14333; }
+
+.bg-2 {
+  background-color: #160628;
+  color: #ffe53d; }
+  .bg-2 .container-principal .gr-2 {
+    background: #1d0934; }
+  .bg-2 .container-principal .gk-2 {
+    background: #1d0934; }
+    .bg-2 .container-principal .gk-2 .key, .bg-2 .bg-1 .container-principal .gk-2 .grupo-keys .keyRD, .bg-1 .bg-2 .container-principal .gk-2 .grupo-keys .keyRD, .bg-2 .bg-1 .container-principal .grupo-keys .gk-2 .keyRD, .bg-1 .bg-2 .container-principal .grupo-keys .gk-2 .keyRD, .bg-2 .bg-1 .container-principal .gk-2 .grupo-keys .grupo-bajo .igual, .bg-1 .bg-2 .container-principal .gk-2 .grupo-keys .grupo-bajo .igual, .bg-2 .bg-1 .container-principal .grupo-keys .grupo-bajo .gk-2 .igual, .bg-1 .bg-2 .container-principal .grupo-keys .grupo-bajo .gk-2 .igual {
+      background-color: #341c4f;
+      color: #ffe53d;
+      box-shadow: inset 0px -10px 1px -5px #bc15f4; }
+      .bg-2 .container-principal .gk-2 .key:hover, .bg-2 .bg-1 .container-principal .gk-2 .grupo-keys .keyRD:hover, .bg-1 .bg-2 .container-principal .gk-2 .grupo-keys .keyRD:hover, .bg-2 .bg-1 .container-principal .grupo-keys .gk-2 .keyRD:hover, .bg-1 .bg-2 .container-principal .grupo-keys .gk-2 .keyRD:hover, .bg-2 .bg-1 .container-principal .gk-2 .grupo-keys .grupo-bajo .igual:hover, .bg-1 .bg-2 .container-principal .gk-2 .grupo-keys .grupo-bajo .igual:hover, .bg-2 .bg-1 .container-principal .grupo-keys .grupo-bajo .gk-2 .igual:hover, .bg-1 .bg-2 .container-principal .grupo-keys .grupo-bajo .gk-2 .igual:hover {
+        background-color: #4d2a74; }
+    .bg-2 .container-principal .gk-2 .keyRD, .bg-2 .bg-1 .container-principal .gk-2 .grupo-keys .grupo-bajo .igual, .bg-1 .bg-2 .container-principal .gk-2 .grupo-keys .grupo-bajo .igual, .bg-2 .bg-1 .container-principal .grupo-keys .grupo-bajo .gk-2 .igual, .bg-1 .bg-2 .container-principal .grupo-keys .grupo-bajo .gk-2 .igual {
+      background-color: #58077d;
+      box-shadow: inset 0px -10px 1px -5px #bc15f4; }
+      .bg-2 .container-principal .gk-2 .keyRD:hover, .bg-2 .bg-1 .container-principal .gk-2 .grupo-keys .grupo-bajo .igual:hover, .bg-1 .bg-2 .container-principal .gk-2 .grupo-keys .grupo-bajo .igual:hover, .bg-2 .bg-1 .container-principal .grupo-keys .grupo-bajo .gk-2 .igual:hover, .bg-1 .bg-2 .container-principal .grupo-keys .grupo-bajo .gk-2 .igual:hover {
+        background-color: #6c099a; }
+    .bg-2 .container-principal .gk-2 .grupo-bajo .igual {
+      background-color: #00e0d1;
+      box-shadow: inset 0px -10px 1px -5px #6cf9f2; }
+      .bg-2 .container-principal .gk-2 .grupo-bajo .igual:hover {
+        background-color: #33fff1; }
 
 /*# sourceMappingURL=estilos.css.map */

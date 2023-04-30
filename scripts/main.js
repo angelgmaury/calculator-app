@@ -24,8 +24,7 @@ keys.forEach((e) => {
       ) {
         valor1 = parseFloat(keyPad.textContent);
         operador = v.target.textContent;
-        console.log(valor1);
-        keyPad.textContent = '0';
+        keyPad.textContent = '';
       } else {
         keyPad.textContent += '' + v.target.textContent;
         if (
@@ -85,4 +84,15 @@ reset.addEventListener('click', () => {
   valor1 = '';
   valor2 = '';
   keyPad.textContent = '';
+});
+
+// 2do Design
+const bg1 = document.querySelector('.bg-1');
+const bgRes = document.querySelector('.grupo-resultado');
+const bgKeys = document.querySelector('.grupo-keys');
+const btnChangeTheme = document.getElementById('switch');
+btnChangeTheme.addEventListener('click', () => {
+  bg1.classList.toggle('bg-2');
+  bgRes.classList.toggle('gr-2');
+  bgKeys.classList.toggle('gk-2');
 });

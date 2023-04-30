@@ -65,8 +65,8 @@
     .bg-1 .container-principal .grupo-keys {
       background-color: #232c43;
       display: grid;
-      gap: 20px;
-      padding: 30px;
+      gap: 10px;
+      padding: 20px;
       border-radius: 10px;
       place-items: center;
       grid-template-columns: repeat(4, 1fr);
@@ -80,8 +80,8 @@
         align-items: center;
         justify-content: center;
         border-radius: 5px;
-        height: 70px;
-        width: 70px;
+        height: 60px;
+        width: 60px;
         font-size: 35px;
         padding-top: 5px;
         cursor: pointer;

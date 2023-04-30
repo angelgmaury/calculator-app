@@ -80,8 +80,8 @@
         .grupo-keys{
             background-color:hsl(223, 31%, 20%);
             display: grid;
-            gap: 20px;
-            padding: 30px;
+            gap: 10px;
+            padding: 20px;
             border-radius: 10px;
             place-items: center;
             grid-template-columns: repeat(4,1fr);
@@ -101,13 +101,13 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 5px;
-                height: 70px;
-                width: 70px;
+                height: 60px;
+                width: 60px;
                 font-size: 35px;
                 padding-top: 5px;
                 cursor: pointer;
                 box-shadow: inset 0px -12px 1px -5px  hsl(28, 16%, 65%);
-                color: hsl(221, 14%, 31%)
+                color: hsl(221, 14%, 31%);
             }
             .keyRD{
                 @extend .key;
@@ -189,3 +189,4 @@
         }
     }
 }
+

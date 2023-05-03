@@ -13,9 +13,8 @@ let operador = '';
 
 keys.forEach((e) => {
   e.addEventListener('click', (v) => {
-    if (keyPad.textContent === '0') {
-      keyPad.textContent = v.target.textContent;
-    } else {
+    if (keyPad.textContent === '') keyPad.textContent = v.target.textContent;
+    else {
       if (
         v.target.textContent === opSuma.textContent ||
         v.target.textContent === opResta.textContent ||
@@ -35,7 +34,6 @@ keys.forEach((e) => {
           v.target.textContent !== opMulti.textContent
         ) {
           valor2 = parseFloat(keyPad.textContent);
-          console.log(valor2);
         }
       }
     }

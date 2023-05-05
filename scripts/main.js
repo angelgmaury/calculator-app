@@ -1,15 +1,16 @@
 const keys = document.querySelectorAll('.key');
 const keyPad = document.getElementById('keypad');
+
 //Operadores
 
 const opSuma = document.getElementById('opSuma');
 const opResta = document.getElementById('opResta');
 const opDiv = document.getElementById('opDiv');
 const opMulti = document.getElementById('opMulti');
-
-let valor1 = '';
+let num1 = document.querySelector('.num1');
+let valor1 = num1.textContent;
 let valor2 = '';
-let operador = '';
+let operador = document.querySelector('.operador');
 
 keys.forEach((e) => {
   e.addEventListener('click', (v) => {
@@ -22,8 +23,10 @@ keys.forEach((e) => {
         v.target.textContent === opMulti.textContent
       ) {
         valor1 = parseFloat(keyPad.textContent);
-        operador = v.target.textContent;
+        num1.textContent = valor1;
+        operador.textContent = v.target.textContent;
         keyPad.textContent = '';
+        console.log(valor1);
       } else {
         keyPad.textContent += '' + v.target.textContent;
         if (
@@ -34,6 +37,7 @@ keys.forEach((e) => {
           v.target.textContent !== opMulti.textContent
         ) {
           valor2 = parseFloat(keyPad.textContent);
+          console.log(valor2);
         }
       }
     }
@@ -43,18 +47,21 @@ keys.forEach((e) => {
 const calcularRes = document.querySelector('.igual');
 
 calcularRes.addEventListener('click', () => {
-  switch (operador) {
+  switch (operador.textContent) {
     case '+':
       let resultadoSuma = valor1 + valor2;
       keyPad.textContent = resultadoSuma;
+      num1.textContent = '';
       break;
     case '-':
       let resultadoResta = valor1 - valor2;
       keyPad.textContent = resultadoResta;
+      num1.textContent = '';
       break;
     case 'x':
       let resultadoMulti = valor1 * valor2;
       keyPad.textContent = resultadoMulti;
+      num1.textContent = '';
       break;
     case '/':
       if (valor2 === 0) {
@@ -62,6 +69,7 @@ calcularRes.addEventListener('click', () => {
       } else {
         let resultadoDiv = valor1 / valor2;
         keyPad.textContent = resultadoDiv;
+        num1.textContent = '';
       }
       break;
     default:
@@ -77,11 +85,13 @@ deleted.addEventListener('click', () => {
 });
 
 // RESET
-const reset = document.querySelector('.reset');
+const reset = document.querySelector('#reset');
 reset.addEventListener('click', () => {
-  valor1 = '';
+  num1.textContent = '';
+  valor1 = null;
   valor2 = '';
   keyPad.textContent = '';
+  operador.textContent = '';
 });
 
 // 2do Design

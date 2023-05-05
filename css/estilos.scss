@@ -70,10 +70,25 @@
             display: flex;
             justify-content: end;
             align-items: center;
+            .operador{
+                position: absolute;
+                left: 0;
+                padding-left: 10px;
+                font-size: 30px;
+            }
             .keypad{
                 padding-right: 20px;
                 padding-top: 4px;
-                font-size: 40px;
+                font-size: 30px;
+                max-width: 500px;
+            }
+
+            .num1{
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                font-size: 20px;
+                color: #ccc;
             }
         }
 
@@ -233,6 +248,17 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media(min-width:1200px){
+    .bg-1{
+        width: 100%;
+
+        .container-principal{
+            width: 30%;
+            margin: 0 auto;
         }
     }
 }

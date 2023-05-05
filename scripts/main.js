@@ -39,7 +39,6 @@ keys.forEach((e) => {
           v.target.textContent !== opDiv.textContent &&
           v.target.textContent !== opMulti.textContent
         ) {
-          keyPad.textContent = v.target.textContent;
           valor2 = parseFloat(keyPad.textContent);
         }
       }

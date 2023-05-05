@@ -9,13 +9,15 @@ const opDiv = document.getElementById('opDiv');
 const opMulti = document.getElementById('opMulti');
 let num1 = document.querySelector('.num1');
 let valor1 = num1.textContent;
-let valor2 = '';
+let valor2 = null;
+let valor1Guardado = false;
 let operador = document.querySelector('.operador');
 
 keys.forEach((e) => {
   e.addEventListener('click', (v) => {
-    if (keyPad.textContent === '') keyPad.textContent = v.target.textContent;
-    else {
+    if (keyPad.textContent === '') {
+      keyPad.textContent = v.target.textContent;
+    } else {
       if (
         v.target.textContent === opSuma.textContent ||
         v.target.textContent === opResta.textContent ||
@@ -26,18 +28,19 @@ keys.forEach((e) => {
         num1.textContent = valor1;
         operador.textContent = v.target.textContent;
         keyPad.textContent = '';
-        console.log(valor1);
+        valor1Guardado = true;
       } else {
         keyPad.textContent += '' + v.target.textContent;
+
         if (
-          valor1 !== '' &&
+          valor1Guardado &&
           v.target.textContent !== opSuma.textContent &&
           v.target.textContent !== opResta.textContent &&
           v.target.textContent !== opDiv.textContent &&
           v.target.textContent !== opMulti.textContent
         ) {
+          keyPad.textContent = v.target.textContent;
           valor2 = parseFloat(keyPad.textContent);
-          console.log(valor2);
         }
       }
     }
@@ -49,21 +52,25 @@ const calcularRes = document.querySelector('.igual');
 calcularRes.addEventListener('click', () => {
   switch (operador.textContent) {
     case '+':
+      valor2 = parseFloat(keyPad.textContent);
       let resultadoSuma = valor1 + valor2;
       keyPad.textContent = resultadoSuma;
       num1.textContent = '';
       break;
     case '-':
+      valor2 = parseFloat(keyPad.textContent);
       let resultadoResta = valor1 - valor2;
       keyPad.textContent = resultadoResta;
       num1.textContent = '';
       break;
     case 'x':
+      valor2 = parseFloat(keyPad.textContent);
       let resultadoMulti = valor1 * valor2;
       keyPad.textContent = resultadoMulti;
       num1.textContent = '';
       break;
     case '/':
+      valor2 = parseFloat(keyPad.textContent);
       if (valor2 === 0) {
         keyPad.textContent = 'Error: división por cero';
       } else {
